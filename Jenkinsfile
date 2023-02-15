@@ -3,6 +3,8 @@ pipeline{
   stages{
     stage("build"){
       steps{
+        sh 'git branch snehal'
+        sh 'git checkout snehal'
         sh "echo Jay Shree Ram using Jenkins File > simple.txt" 
         sh "echo Jay siya ram >> simple.txt"
       }
@@ -11,7 +13,7 @@ pipeline{
       steps{
         sh "git add ."
         sh 'git commit -m "snehal"'
-        sh "git push -u origin master"
+        sh "git push -u origin snehal"
       }
     }
   }
