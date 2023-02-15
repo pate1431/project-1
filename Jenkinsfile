@@ -3,17 +3,15 @@ pipeline{
   stages{
     stage("build"){
       steps{
-        sh "echo Jay Shree Ram using Jenkins File"
-        sh "echo Jay siya ram"
+        sh "echo Jay Shree Ram using Jenkins File > simple.txt" 
+        sh "echo Jay siya ram >> simple.txt"
       }
     }
     stage("installation"){
       steps{
-        sh "ls"
-        sh "pwd"
-        sh "touch simple.txt"
-        sh "echo helo world >> simple.txt"
-        sh "echo asdhiaoh >> simple.txt"
+        sh "git add ."
+        sh "git commit -m hello"
+        sh "git push"
       }
     }
   }
