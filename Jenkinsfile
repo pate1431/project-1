@@ -10,7 +10,7 @@ pipeline{
     stage("installation"){
       steps{
         sh "git add ."
-        sh "git commit"
+        sh 'git commit -m "snehal"'
         sh "git push"
       }
     }
