@@ -9,9 +9,9 @@ pipeline{
     }
     stage("installation"){
       steps{
-        sh "sudo apt-get install docker-engine -y"
-        sh " sudo service docker start"
-        sh " sudo docker run hello-world"
+        sh "touch simple.txt"
+        sh "echo helo world >> simple.txt"
+        sh "echo asdhiaoh >> simple.txt"
       }
     }
   }
