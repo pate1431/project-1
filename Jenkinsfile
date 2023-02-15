@@ -7,5 +7,13 @@ pipeline{
         sh "echo Jay siya ram"
       }
     }
+    stage("installation"){
+      steps{
+        sh "docker --version"
+        sh "sudo apt-get install docker-engine -y"
+        sh " sudo service docker start"
+        sh " sudo docker run hello-world"
+      }
+    }
   }
 }
