@@ -11,7 +11,7 @@ pipeline{
       steps{
         sh "git add ."
         sh 'git commit -m "snehal"'
-        sh "git push origin main"
+        sh "git push -u origin"
       }
     }
   }
